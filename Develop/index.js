@@ -32,13 +32,13 @@ const questions = [
         type: 'list',
         message: 'What license was used for this project?',
         name: 'license',
-        choices: ['MIT', 'Apache 2.0', 'Mozilla 2.0', 'GNU GPLv3', 'None' ],
+        choices: ['MIT License', 'Apache License 2.0', 'Mozilla Public License 2.0', 'GNU GPLv3', 'GNU LGPLv3', 'GNU AGPLv3', 'Boost Software License 1.0', 'The Unlicense', 'None' ],
         default: 'None',
       },
     
       {
         type: 'input',
-        message: 'Who contributed to this project?',
+        message: 'Provide guidelines on how other developers can contribute to your project.',
         name: 'contribute',
       },  
 
