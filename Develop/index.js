@@ -78,13 +78,9 @@ const writeFileAsync = util.promisify(writeToFile);
 // TODO: Create a function to initialize app
 function init() {
   const userResponses = inquirer.prompt(questions);
-        console.log("Your responses: ", userResponses);
-
-        console.log("Generating your README next...")
         const markdown = generateMarkdown(userResponses);
-        console.log(markdown);
-    
         writeFileAsync('README.md', markdown);
+        console.log("Generating your README ...")
 
       //} try (err) {
       //   console.log(err);
