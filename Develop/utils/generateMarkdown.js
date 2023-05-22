@@ -22,7 +22,7 @@ function renderLicenseSection(license) {
   if (license !== 'None') {
     return `## License
 
-This project is licensed under ${license} license.`;
+This project is licensed under the ${license} license.`;
   }
   return '';
 }
@@ -50,7 +50,7 @@ function generateMarkdown(data) {
   
   ## Installation
   
-  To install necessary dependencies, run the following command:
+  To install necessary dependencies, run this command:
   
   \`\`\`
   ${data.installation}
@@ -68,7 +68,7 @@ function generateMarkdown(data) {
   
   ## Tests
   
-  To run tests, run the following command:
+  To run tests, run this command:
   
   \`\`\`
   ${data.test}
