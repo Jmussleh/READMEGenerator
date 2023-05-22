@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
-const util = require('util');
+const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -21,6 +21,7 @@ const questions = [
         type: 'input',
         message: 'What are the installation instructions?',
         name: 'install',
+        default: 'npm i',
       },
     
       {
@@ -34,7 +35,7 @@ const questions = [
         type: 'list',
         message: 'What license was used for this project?',
         name: 'license',
-        choices: ['MIT License', 'Apache License 2.0', 'Mozilla Public License 2.0', 'GNU GPLv3', 'GNU LGPLv3', 'GNU AGPLv3', 'Boost Software License 1.0', 'The Unlicense', 'None' ],
+        choices: ['MIT', 'Apache 2.0', 'Mozilla Public 2.0', 'GNU GPLv3', 'GNU LGPLv3', 'GNU AGPLv3', 'Boost Software 1.0', 'The Unlicense', 'None' ],
         default: 'None',
       },
     
@@ -46,8 +47,9 @@ const questions = [
 
       {
         type: 'input',
-        message: 'What testing was done for this project?',
+        message: 'What is the command to run tests?',
         name: 'test',
+        default: 'npm test'
       },
 
       {
